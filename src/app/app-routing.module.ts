@@ -1,6 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-export const routes: Routes = [];
+import { LayoutsComponent } from './components/layouts/layouts.component';
+
+
+
+const routes: Routes = [
+  {
+    path:"",
+    component: LayoutsComponent
+  }
+];
+
+
+
+
+
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
