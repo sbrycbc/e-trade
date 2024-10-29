@@ -1,5 +1,5 @@
 <div class="container">
-    <button class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-4 mt-5 w-100 fs-5">
+    <button class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-4 mt-5 w-100 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i class="fa-solid fa-circle-plus"></i>
         Add to Card</button>
     
@@ -12,9 +12,34 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <a href="#" class="btn text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-4 fs-6 fw-semibold">Go somewhere</a>
                 </div>
               </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" class="form-control">
+          </div>
+          <div class="form-group mt-2">
+            <label for="productImage">Product Image</label>
+            <input type="text" id="productImage" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="p-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-4">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
