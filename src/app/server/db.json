@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "id": "fe16",
+      "productName": "Tomato",
+      "productImage": "https://cdn.shopify.com/s/files/1/0632/2054/7818/products/organik-domates-500-gr-262760.jpg?v=1690647140"
+    },
+    {
+      "id": "26d8",
+      "productName": "Paprika",
+      "productImage": "https://termodizayn.com/thumb.php?p=./img/uploads/muhafazakosullari/icerik/17-biber1.jpg&h=434"
+    }
+  ],
+  "baskets": []
+}

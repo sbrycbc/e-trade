@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutsComponent } from './components/layouts/layouts.component';  
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
