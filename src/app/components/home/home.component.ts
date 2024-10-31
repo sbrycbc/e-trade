@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductModel } from '../../models/products.model';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,16 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-  products: string[] = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-  ]
+  product: ProductModel = new ProductModel
+  products: ProductModel[] = [ ]
   constructor() { }
     ngOnInit(): void {
    }
+  
+  addProduct(){
+    this.products.push(this.product);
+    this.product = new ProductModel();
+
+  }
 
 }
