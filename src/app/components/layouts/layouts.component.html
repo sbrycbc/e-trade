@@ -9,9 +9,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-danger-emphasis" aria-current="page">
+            <a class="nav-link active text-danger-emphasis" routerLink="/basket"aria-current="page">
               <i class="fa-solid fa-basket-shopping"></i>
-              Cart</a>
+              Cart
+              <span class="badge text-bg-secondary">{{baskets.length}}</span>
+            </a>
           </li>
         </ul>
         <form class="d-flex" role="search">
