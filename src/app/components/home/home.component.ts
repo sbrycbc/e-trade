@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductModel } from '../../models/products.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { BasketService } from '../../services/basket.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit {
   product: ProductModel = new ProductModel
   products: ProductModel[] = [ ]
   constructor(
-    private _http: HttpClient
+    private _http: HttpClient,
+    private _basket:BasketService
   ) { }
     ngOnInit(): void {
       this.getProductList();
@@ -40,10 +42,18 @@ export class HomeComponent implements OnInit {
 
   addBasket(model: ProductModel){
     this._http.post<any>(this.api + "baskets",model).subscribe({
-      next:(res)=>console.log("Product schon da!!"),
+      next:(res)=>{console.log("Product schon da!!")
+        this.getBaskets()
+      },
       error:(err)=>console.log(err)
     })
+  }
 
+  getBaskets(){
+    this._http.get<any>(this.api + "baskets").subscribe({
+      next : (res)=>this._basket.baskets = res,
+      error : (err)=>console.log(err)
+    })
   }
 
 }
